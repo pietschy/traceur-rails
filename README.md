@@ -1,1 +1,1 @@
-# Traceur::Rails
+# traceur-rails
