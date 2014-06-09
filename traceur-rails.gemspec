@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'traceur-assets/version'
+require 'traceur/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'traceur-assets'
-  spec.version       = TraceurAssets::VERSION
+  spec.name          = 'traceur-rails'
+  spec.version       = Traceur::VERSION
   spec.authors       = ['Aaron Ackerman']
   spec.email         = ['theron17@gmail.com']
   spec.summary       = %q{Traceur Compiler integration with Sprockets}

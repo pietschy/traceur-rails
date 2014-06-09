@@ -2,7 +2,7 @@ require 'execjs'
 require 'json'
 require 'tilt'
 
-module TraceurAssets
+module Traceur
   class Template < ::Tilt::Template
     self.default_mime_type = 'application/javascript'
 

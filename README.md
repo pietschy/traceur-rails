@@ -1,1 +1,1 @@
-# TraceurAssets
+# Traceur::Rails

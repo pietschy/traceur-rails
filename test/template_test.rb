@@ -1,8 +1,8 @@
 require 'test_helper'
-require 'traceur-assets/template'
+require 'traceur/template'
 require 'execjs'
 
-describe TraceurAssets::Template do
+describe Traceur::Template do
 
 Scope = Struct.new('Scope', :root_path, :logical_path)
 
@@ -37,7 +37,7 @@ define("foo",
 JS
     expected.rstrip!
 
-    template = TraceurAssets::Template.new { @source }
+    template = Traceur::Template.new { @source }
     template.render(@scope).must_equal expected
   end
 
