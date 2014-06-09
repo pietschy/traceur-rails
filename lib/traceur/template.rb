@@ -9,6 +9,7 @@ module Traceur
     Node = ::ExecJS::ExternalRuntime.new(
       name: 'Node.js (V8)',
       command: ['nodejs', 'node'],
+      runner_path: File.expand_path('../support/runner.js', __FILE__),
       encoding: 'UTF-8'
     )
 
@@ -28,12 +29,14 @@ module Traceur
 
     def generate_source(scope)
       <<-SOURCE
-
+        var traceur = require(#{traceur_path});
+        var fs = require('fs');
+        return '';
       SOURCE
     end
 
-    def compiler_options
-      ::JSON.generate({})
+    def traceur_path
+      File.expand_path('../bin/traceur.js', __FILE__)
     end
   end
 end
