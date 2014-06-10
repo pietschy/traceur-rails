@@ -14,28 +14,28 @@ var foo = function() {
   console.log('bar');
 };
 
-export default = foo;
+export default foo;
 JS
-    @source.rstrip!
+    @source.strip!
     @scope = Scope.new('', 'foo')
   end
 
-    it 'transpiles tc into amd by default' do
+    it 'transpiles tc files' do
     expected = <<-JS
-define("foo",
-  ["dep","exports"],
-  function(__dependency1__, __exports__) {
-    "use strict";
-    var dep = __dependency1__["default"];
-
-    var foo = function() {
-      console.log('bar');
-    };
-
-    __exports__["default"] = foo;
-  });
+"use strict";
+Object.defineProperties(exports, {
+  default: {get: function() {
+      return $__default;
+    }},
+  __esModule: {value: true}
+});
+var dep = $traceurRuntime.assertObject(require('dep')).default;
+var foo = function() {
+  console.log('bar');
+};
+var $__default = foo;
 JS
-    expected.rstrip!
+    expected.lstrip!
 
     template = Traceur::Template.new { @source }
     template.render(@scope).must_equal expected

@@ -23,20 +23,21 @@ module Traceur
 
     private
 
-    def transpiler_path
-      File.expand_path('../bin/traceur.js', __FILE__)
-    end
-
     def generate_source(scope)
       <<-SOURCE
-        var traceur = require(#{traceur_path});
-        var fs = require('fs');
-        return '';
+        var traceur = require("#{traceur_path}");
+        var result  = traceur.compile(#{::JSON.generate(data, quirks_mode: true)});
+
+        if (result.error) {
+          throw result.error;
+        }
+
+        return result.js;
       SOURCE
     end
 
     def traceur_path
-      File.expand_path('../bin/traceur.js', __FILE__)
+      File.expand_path('../support/traceur/src/node/api.js', __FILE__)
     end
   end
 end
