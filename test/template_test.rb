@@ -22,7 +22,7 @@ JS
 
     it 'transpiles tc files' do
     expected = <<-JS
-"use strict";
+(function(){"use strict";
 Object.defineProperties(exports, {
   default: {get: function() {
       return $__default;
@@ -34,8 +34,9 @@ var foo = function() {
   console.log('bar');
 };
 var $__default = foo;
+})();
 JS
-    expected.lstrip!
+    expected.strip!
 
     template = Traceur::Template.new { @source }
     template.render(@scope).must_equal expected

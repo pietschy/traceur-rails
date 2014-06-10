@@ -32,7 +32,7 @@ module Traceur
           throw result.error;
         }
 
-        return result.js;
+        return '(function(){' + result.js + "})();";
       SOURCE
     end
 
