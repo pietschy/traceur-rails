@@ -31,7 +31,7 @@ module Traceur
           modules: 'register'
         });
 
-        if (result.errors) {
+        if (result.errors && result.errors.length) {
           throw "\\n" + result.errors.join("\\n");
         }
 
