@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Aaron Ackerman']
   spec.email         = ['theron17@gmail.com']
   spec.summary       = %q{Traceur Compiler integration with Sprockets}
-  spec.description   = %q{Compile Traceur Compiler supported Javascript with Sprockets}
+  spec.description   = %q{Traceur Compiler supported Javascript with Sprockets}
   spec.homepage      = ''
   spec.license       = 'MIT'
 
