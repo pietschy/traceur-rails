@@ -1,4 +1,5 @@
 require 'traceur/version'
+require 'traceur/config'
 require 'traceur/template'
 require 'traceur/tilt'
 require 'traceur/sprockets'
