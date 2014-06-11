@@ -31,8 +31,8 @@ module Traceur
           modules: 'register'
         });
 
-        if (result.error) {
-          throw result.error;
+        if (result.errors) {
+          throw "\\n" + result.errors.join("\\n");
         }
 
         return result.js;
