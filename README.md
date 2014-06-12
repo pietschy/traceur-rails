@@ -6,7 +6,7 @@ gem install traceur-rails
 
 ## Requirements
 
-Requires `node` to be installed.
+Requires [`node`](http://nodejs.org) to be installed.
 
 ## Usage
 
@@ -14,9 +14,9 @@ Despite being named `traceur-rails` this gem can be used with any project that u
 
 ## traceur modules
 
-Tracuer offers a `modules` configuration option. Generally this will be set in an initializer. This allows you to specify how modules should be compiled. The options are available in the [`traceur-compiler` wiki](https://github.com/google/traceur-compiler/wiki/Options-for-Compiling)
+Tracuer offers a `modules` configuration option. Generally this will be set in an initializer. This allows you to specify how modules should be compiled. The options are available in the [traceur-compiler wiki](https://github.com/google/traceur-compiler/wiki/Options-for-Compiling)
 
-```
+```ruby
 Traceur::Config.compile_to :amd
 ```
 
