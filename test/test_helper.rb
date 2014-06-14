@@ -11,3 +11,7 @@ class MiniTest::Spec
     alias :context :describe
   end
 end
+
+def fixture(filename)
+  IO.read("test/fixtures/#{filename}")
+end

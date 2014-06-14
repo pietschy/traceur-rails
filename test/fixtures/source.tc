@@ -1,0 +1,7 @@
+import dep from 'dep';
+
+var foo = function() {
+  console.log('bar');
+};
+
+export default foo;
