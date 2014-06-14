@@ -4,6 +4,8 @@
 gem install traceur-rails
 ```
 
+[Here on rubygems.org](https://rubygems.org/gems/traceur-rails)
+
 ## Requirements
 
 Requires [`node`](http://nodejs.org) to be installed.
