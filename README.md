@@ -10,7 +10,7 @@ Requires [`node`](http://nodejs.org) to be installed.
 
 ## Usage
 
-Despite being named `traceur-rails` this gem can be used with any project that uses `sprockets`. Use `.tc` as the extension for any file that would normally use a `.js` extension and the file will be compiled with `traceur`.
+Despite being named `traceur-rails` this gem can be used with any project that uses [`sprockets`](https://github.com/sstephenson/sprockets). Use `.tc` as the extension for any file that would normally use a `.js` extension and the file will be compiled with `traceur`.
 
 ## traceur modules
 
