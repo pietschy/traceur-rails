@@ -2,7 +2,7 @@ module Traceur
   module Config
     class << self
       def compile_to
-        @compile_to || :register
+        @compile_to || :amd
       end
 
       def compile_to=(target)
