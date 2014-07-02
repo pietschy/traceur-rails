@@ -20,7 +20,7 @@ Requires [`node`](http://nodejs.org) to be installed.
 
 Despite being named `traceur-rails` this gem can be used with any project that uses [`sprockets`](https://github.com/sstephenson/sprockets). Use `.tc` as the extension for any file that would normally use a `.js` extension and the file will be compiled with `traceur`.
 
-## traceur modules
+## Traceur modules
 
 Tracuer offers a `modules` configuration option. Generally this will be set in an initializer. This allows you to specify how modules should be compiled. The options are available in the [traceur-compiler wiki](https://github.com/google/traceur-compiler/wiki/Options-for-Compiling)
 
