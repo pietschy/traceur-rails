@@ -22,6 +22,15 @@ Tracuer offers a `modules` configuration option. Generally this will be set in a
 Traceur::Config.compile_to :amd
 ```
 
+## Rails Asset Pipeline
+
+Traceur to compile client side or the Traceur runtime can be loaded through the asset pipeline in `application.js`
+
+```
+//= require traceur
+//= require traceur-runtime
+```
+
 ## Author
 
 | [![twitter/_aaronackerman_](http://gravatar.com/avatar/c73ff9c7e654647b2b339d9e08b52143?s=70)](http://twitter.com/_aaronackerman_ "Follow @_aaronackerman_ on Twitter") |
