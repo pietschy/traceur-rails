@@ -24,9 +24,10 @@ Traceur::Config.compile_to :amd
 
 ## Rails Asset Pipeline
 
-Traceur to compile client side or the Traceur runtime can be loaded through the asset pipeline in `application.js`
+`traceur` and `traceur-runtime` can be loaded through the asset pipeline in `application.js`. `traceur` can be used to compile traceur javascript on the client side, the `traceur-runtime` is required to run traceur compiled code. The `traceur-runtime` is include in `traceur` so there is not need to require both.
 
 ```
+// application.js
 //= require traceur
 //= require traceur-runtime
 ```
