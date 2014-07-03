@@ -6,7 +6,7 @@ gem install traceur-rails
 
 [Here on rubygems.org](https://rubygems.org/gems/traceur-rails)
 
-## In your Gemfile
+## Gemfile
 
 ```ruby
 gem 'traceur-rails', '~> 0.0.3'
