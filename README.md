@@ -25,7 +25,7 @@ Despite being named `traceur-rails` this gem can be used with any project that u
 Traceur offers a `modules` configuration option. This allows you to specify how modules should be compiled. The options are available in the [traceur-compiler wiki](https://github.com/google/traceur-compiler/wiki/Options-for-Compiling). AMD is the default compilation target.
 
 ```ruby
-Traceur::Config.compile_to :amd
+Traceur::Config.compile_to = :amd
 ```
 
 ## Rails Asset Pipeline
