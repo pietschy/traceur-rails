@@ -13,5 +13,5 @@ class MiniTest::Spec
 end
 
 def fixture(filename)
-  IO.read("test/fixtures/#{filename}")
+  IO.read("fixtures/#{filename}")
 end

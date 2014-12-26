@@ -27,15 +27,14 @@ module Traceur
       <<-SOURCE
         var traceur = require("#{traceur_path}");
         var result  = traceur.compile(#{::JSON.generate(data, quirks_mode: true)}, {
-          filename: '#{module_name(scope.root_path, scope.logical_path)}',
           modules:  '#{Traceur::Config.compile_to}'
-        });
+        }, '#{module_name(scope.root_path, scope.logical_path)}');
 
         if (result.errors && result.errors.length) {
           throw "\\n" + result.errors.join("\\n");
         }
 
-        return result.js;
+        return result;
       SOURCE
     end
 
